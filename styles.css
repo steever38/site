@@ -1,0 +1,63 @@
+@font-face {
+	font-family: 'font';
+	src: url(‘font.ttf’) format(‘truetype’),
+}
+
+@font-face {
+    font-family: "font";
+    src: url("font.ttf");
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    font-family: 'font', serif;
+}
+h1 {
+    font-size: 3em;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.logos img {
+    width: 125px;
+    height: 125px;
+    margin: 10px;
+    position: relative;
+}
+.logos a img {
+    --transition-duration: 3s;
+    transition: transform var(--transition-duration);
+    transform: translate(calc(-5px + 10px * var(--random-x)), calc(-5px + 10px * var(--random-y)));
+}
+
+.logos a:hover img {
+    --transition-duration: 0.8s;
+    transform: translate(calc(-25px + 50px * var(--random-x)), calc(-25px + 50px * var(--random-y)));
+}
+
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .logos img {
+        width: 50px;
+        height: 50px;
+    }
+}
