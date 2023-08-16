@@ -11,6 +11,7 @@
 body {
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 .header {
@@ -29,15 +30,18 @@ h1 {
 }
 
 .logos img {
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
     position: relative;
+}
+a{
+    cursor: none;
 }
 .logos a img {
     --transition-duration: 3s;
     transition: transform var(--transition-duration);
-    transform: translate(calc(-5px + 10px * var(--random-x)), calc(-5px + 10px * var(--random-y)));
+    transform: translate(calc(-15px + 30px * var(--random-x)), calc(-15px + 30px * var(--random-y)));
 }
 
 .logos a:hover img {
@@ -60,4 +64,30 @@ h1 {
         width: 50px;
         height: 50px;
     }
+}
+
+/* Ajoutez ces lignes à votre fichier CSS existant */
+
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+.cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: rgb(255, 255, 255);
+}
+.cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+}
+.page, .page a {
+   cursor: none;
 }
