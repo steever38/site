@@ -18,8 +18,8 @@ video.addEventListener('ended', () => {
 // Ajoutez ces lignes à votre fichier JavaScript existant
 
 // set the starting position of the cursor outside of the screen
-let clientX = 100;
-let clientY = 100;
+let clientX = 1000;
+let clientY = 1000;
 const innerCursor = document.querySelector(".cursor--small");
 
 const initCursor = () => {
