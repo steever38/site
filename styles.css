@@ -33,6 +33,11 @@
     width: 175px;
     height: 175px;
     margin: 10px;
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0.5)) 
+    drop-shadow(2px 0 0 rgba(255, 255, 255, 0.5)) 
+    drop-shadow(-2px 0 0 rgba(255, 255, 255, 0.5)) 
+    drop-shadow(0 2px 0 rgba(255, 255, 255, 0.5)) 
+    drop-shadow(0 -2px 0 rgba(255, 255, 255, 0.5));
     transition: transform 0.4s ease;
     transform: translateY(0);
   }
