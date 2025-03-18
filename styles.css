@@ -1,80 +1,75 @@
-@font-face {
-	font-family: 'font';
-	src: url(‘font.ttf’) format(‘truetype’),
-}
-
+/* Définition de la police */
 @font-face {
     font-family: "font";
-    src: url("font.ttf");
+    src: url("font.ttf") format("truetype");
   }
-
-body {
+  
+  /* Styles globaux */
+  body {
     margin: 0;
     padding: 0;
     cursor: none;
-}
-
-.header {
-    text-align: center;
     font-family: 'font', serif;
-}
-h1 {
+  }
+  
+  /* En-tête */
+  .header {
+    text-align: center;
+  }
+  h1 {
     font-size: 3em;
-}
-
-.logos {
+  }
+  
+  /* Section des logos */
+  .logos {
     display: flex;
+    flex-wrap: wrap;           /* Permet le passage à la ligne si besoin */
     justify-content: center;
-    align-items: center;
-    height: 50vh;
-}
-
-.logos img {
-    width: 150px;
-    height: 150px;
+    align-items: flex-end;      /* Aligne les logos en bas de leur ligne */
+    padding: 20px;             /* Un peu d'espace autour */
+  }
+  
+  .logos img {
+    width: 175px;
+    height: 175px;
     margin: 10px;
-    position: relative;
-}
-a{
+    transition: transform 0.4s ease;
+    transform: translateY(0);
+  }
+  .logos a:hover img {
+    transform: translateY(-15px);
+  }
+  
+  a {
     cursor: none;
-}
-.logos a img {
-    --transition-duration: 3s;
-    transition: transform var(--transition-duration);
-    transform: translate(calc(-15px + 30px * var(--random-x)), calc(-15px + 30px * var(--random-y)));
-}
-
-.logos a:hover img {
-    --transition-duration: 0.8s;
-    transform: translate(calc(-25px + 50px * var(--random-x)), calc(-25px + 50px * var(--random-y)));
-}
-
-
-#bg-video {
+  }
+  
+  /* Vidéo de fond */
+  #bg-video {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-}
-
+  }
+  
+/* Responsive pour petits écrans */
 @media (max-width: 600px) {
     .logos img {
-        width: 50px;
-        height: 50px;
+      width: 125px;
+      height: 125px;
     }
-}
-
-/* Ajoutez ces lignes à votre fichier CSS existant */
-
-.cursor {
+  }
+  
+  /* Curseurs personnalisés */
+  .cursor {
     position: fixed;
     left: 0;
     top: 0;
     pointer-events: none;
   }
-.cursor--small {
+  .cursor--small {
     width: 5px;
     height: 5px;
     left: -2.5px;
@@ -82,12 +77,14 @@ a{
     border-radius: 50%;
     z-index: 11000;
     background: rgb(255, 255, 255);
-}
-.cursor--canvas {
+  }
+  .cursor--canvas {
     width: 100vw;
     height: 100vh;
     z-index: 12000;
-}
-.page, .page a {
-   cursor: none;
-}
+  }
+  
+  /* Optionnel : si vous utilisez .page */
+  .page, .page a {
+    cursor: none;
+  }
