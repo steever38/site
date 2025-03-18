@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>STEEVER38</title>
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEEVER38</title>
+  <link rel="icon" type="image/x-icon" href="images/icon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cursor cursor--small"></div>
-    <canvas class="cursor cursor--canvas" resize></canvas>
-    <div class="header">
-        <h1><u>STEEVER38</u></h1>
-    </div>
+  <!-- Curseur personnalisé -->
+  <div class="cursor cursor--small"></div>
+  <canvas class="cursor cursor--canvas"></canvas>
+  
+  <!-- En-tête -->
+  <header class="header">
+    <h1><u>STEEVER38</u></h1>
+  </header>
+  
+  <!-- Section des logos -->
+  <main>
     <div class="logos">
-        <a href="https://www.instagram.com/steever38" target="_blank"><img src="images/instagram-logo.png" alt="Instagram"></a>
-        <a href="https://www.youtube.com/c/steever38" target="_blank"><img src="images/youtube-logo.png" alt="YouTube"></a>
-        <a href="https://www.twitter.com/steever381" target="_blank"><img src="images/twitter-logo.png" alt="Twitter"></a>
-        <a href="https://www.discord.gg/yCggt695tT" target="_blank"><img src="images/discord-logo.png" alt="Discord"></a>
-        <a href="https://www.github.com/steever38" target="_blank"><img src="images/github-logo.png" alt="Github"></a>
+      <a href="https://www.twitch.tv/steever38" target="_blank">
+        <img src="images/twitch-logo.png" alt="Twitch" style="margin-right: -20px">
+       </a>
+      <a href="https://www.instagram.com/steever38" target="_blank">
+        <img src="images/instagram-logo.png" alt="Instagram">
+      </a>
+      <a href="https://www.youtube.com/c/steever38" target="_blank">
+        <img src="images/youtube-logo.png" alt="YouTube">
+      </a>
+      <a href="https://www.twitter.com/steever381" target="_blank">
+        <img src="images/twitter-logo.png" alt="Twitter">
+      </a>
+      <a href="https://www.discord.gg/yCggt695tT" target="_blank">
+        <img src="images/discord-logo.png" alt="Discord">
+      </a>
+      <a href="https://www.github.com/steever38" target="_blank">
+        <img src="images/github-logo.png" alt="Github">
+      </a>
     </div>
-    <video id="bg-video" autoplay muted>
-        <source src="images/bg.mp4" type="video/mp4">
-    </video>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-    <script src="scripts.js"></script>
-    <div class="cursor"></div>
+  </main>
+  
+  <!-- Vidéo de fond optimisée en boucle -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="images/bg.mp4" type="video/mp4">
+  </video>
+  
+  <!-- Chargement asynchrone des scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js" defer></script>
+  <script src="scripts.js" defer></script>
+  
+  <!-- V3 du site -->
 </body>
 </html>
-<!-- V2 du site -->
